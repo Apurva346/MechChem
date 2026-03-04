@@ -6,6 +6,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import MachineDetails from './pages/MachineDetails';
 import WhatsAppFloat from './components/common/WhatsAppFloat';
+import Inax from './pages/Inax';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/machine/:id" element={<MachineDetails />} />
             <Route path="*" element={<Home />} />
+            {/* <Route path="/i-nax" element={<Inax />} /> */}
           </Routes>
         </main>
         <WhatsAppFloat />

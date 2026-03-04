@@ -1,551 +1,731 @@
-// import React from 'react';
+// import React from 'react'
+// import { Link } from 'react-router-dom'
+// import {
+//   Settings,
+//   Wrench,
+//   ShieldCheck,
+//   Factory,
+//   Zap,
+//   Award,
+//   Users,
+//   Hammer,
+//   CheckCircle2,
+//   Phone,
+//   Mail,
+//   ChevronRight
+// } from 'lucide-react'
 
 // const Home = () => {
 //   return (
-//     <div className="w-full">
+//     <div className='bg-white w-full overflow-hidden font-sans'>
 //       {/* 1. HERO SECTION */}
-//       <section className="relative bg-white overflow-hidden">
-//         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
-//           <div className="flex flex-col lg:flex-row items-center gap-12">
+//       <section className='relative w-full min-h-[85vh] flex items-center bg-[#003366]'>
+//         {/* Subtle Overlay Pattern */}
+//         <div className="absolute inset-0 opacity-20 pointer-events-none bg-[url('https://www.istockphoto.com/photo/industrial-robot-gm164106765-23374159')]"></div>
 
-//             {/* LEFT: Content */}
-//             <div className="flex-1 text-center lg:text-left z-10">
-//               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 leading-tight uppercase">
-//                 Leading <span className="text-red-700">Manufacturer</span> <br />
-//                 of Industrial Machines
-//               </h1>
-//               <p className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-//                 High-performance engineering solutions for Machining, Metal Fabrication, and Re-Sharpening. Delivering precision and durability to global industries.
-//               </p>
-
-//               <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-//                 <button className="px-8 py-4 bg-red-700 text-white font-bold rounded shadow-lg hover:bg-gray-800 transition-all duration-300 uppercase text-sm tracking-wider">
-//                   Explore Machines
-//                 </button>
-//                 <button className="px-8 py-4 border-2 border-gray-800 text-gray-800 font-bold rounded hover:bg-gray-800 hover:text-white transition-all duration-300 uppercase text-sm tracking-wider">
-//                   Inquiry Now
-//                 </button>
+//         <div className='container mx-auto px-6 md:px-12 lg:px-20 relative z-10'>
+//           <div className='grid lg:grid-cols-2 gap-12 items-center'>
+//             <div className='space-y-8'>
+//               <div className='inline-block border-l-4 border-orange-500 pl-4'>
+//                 <h1 className='text-white text-5xl md:text-7xl font-black uppercase leading-none tracking-tighter'>
+//                   Mech Chem <br />
+//                   <span className='text-orange-500'>Engineering Services</span>
+//                 </h1>
 //               </div>
 
-//               {/* Trust Badges */}
-//               <div className="mt-12 flex items-center justify-center lg:justify-start gap-8 text-gray-400">
-//                 <div className="flex flex-col">
-//                   <span className="text-2xl font-bold text-gray-800">25+</span>
-//                   <span className="text-[10px] uppercase tracking-widest">Years Exp.</span>
-//                 </div>
-//                 <div className="w-px h-10 bg-gray-200"></div>
-//                 <div className="flex flex-col">
-//                   <span className="text-2xl font-bold text-gray-800">ISO</span>
-//                   <span className="text-[10px] uppercase tracking-widest">Certified</span>
-//                 </div>
+//               <h2 className='text-gray-300 text-2xl md:text-3xl font-bold uppercase tracking-wide'>
+//                 Industrial Machinery Sales & Services Since 2012
+//               </h2>
+
+//               <div className='space-y-4 max-w-xl'>
+//                 <p className='text-white text-xl font-extrabold italic'>
+//                   Reliable Industrial Solutions. Trusted Engineering Expertise.
+//                 </p>
+//                 <p className='text-gray-400 text-lg leading-relaxed'>
+//                   Mech Chem Engineering Services is a trusted name in industrial
+//                   machinery sales, service, and support. Since our establishment
+//                   in 2012 in Nagpur, Maharashtra, we have been delivering
+//                   reliable engineering solutions that help industries operate
+//                   efficiently and productively.
+//                 </p>
+//               </div>
+
+//               <div className='flex flex-wrap gap-5 pt-4'>
+//                 <Link
+//                   to='/contact'
+//                   className='bg-orange-500 text-white px-10 py-4 font-black hover:bg-white hover:text-[#003366] transition-all uppercase text-xs tracking-widest shadow-xl flex items-center gap-2'
+//                 >
+//                   Get in Touch <ChevronRight size={16} />
+//                 </Link>
+//                 <Link
+//                   to='/i-nax'
+//                   className='bg-transparent border-2 border-white text-white px-10 py-4 font-black hover:bg-white hover:text-[#003366] transition-all uppercase text-xs tracking-widest'
+//                 >
+//                   Discover i-NAX™
+//                 </Link>
 //               </div>
 //             </div>
 
-//             {/* RIGHT: Fixed Image Size */}
-//             <div className="flex-1 relative w-full flex justify-center lg:justify-end">
-//               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-b-10 border-red-700 w-full max-w550">
+//             <div className='hidden lg:flex justify-end'>
+//               <div className='relative p-4 bg-white/5 rounded-3xl backdrop-blur-sm border border-white/10'>
 //                 <img
-//                   src="https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&q=80&w=800"
-//                   alt="Industrial Machine"
-//                   className="w-full h-350 lg:h-480 object-cover hover:scale-105 transition-transform duration-700"
+//                   src='https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?q=80&w=1000&auto=format&fit=crop'
+//                   alt='Industrial Machinery'
+//                   className='relative w-full max-w-lg h-[450px] object-cover rounded-2xl shadow-2xl'
 //                 />
-//                 <div className="absolute bottom-0 left-0 bg-gray-900/80 text-white p-4 text-[10px] font-mono tracking-widest uppercase">
-//                   Precision Engineering | MechChem India
-//                 </div>
 //               </div>
 //             </div>
-
 //           </div>
 //         </div>
 //       </section>
 
-//       {/* 2. EXPERTISE / CATEGORIES SECTION */}
-//       <section className="bg-gray-50 py-20">
-//         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-//           <div className="text-center mb-16">
-//             <h2 className="text-3xl font-black text-gray-900 uppercase tracking-tight">
-//               Our <span className="text-red-700">Expertise</span>
+//       {/* 2. STATS BAR */}
+//       <section className='w-full bg-gray-50 border-y'>
+//         <div className='container mx-auto px-6 lg:px-20'>
+//           <div className='grid grid-cols-2 lg:grid-cols-4 divide-x divide-gray-200'>
+//             {[
+//               { label: 'Established', val: '2012' },
+//               { label: 'Experience', val: '12+ Years' },
+//               { label: 'Supplied', val: '100+ Machines' },
+//               { label: 'Client Trust', val: 'Reliable' }
+//             ].map((stat, i) => (
+//               <div key={i} className='py-10 text-center'>
+//                 <p className='text-[#003366] text-3xl font-black'>{stat.val}</p>
+//                 <p className='text-gray-500 text-[10px] font-bold uppercase tracking-[0.2em] mt-1'>
+//                   {stat.label}
+//                 </p>
+//               </div>
+//             ))}
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* 3. i-NAX™ BRAND HIGHLIGHT */}
+//       {/* <section className="w-full py-24 bg-white">
+//         <div className="container mx-auto px-6 lg:px-20">
+//           <div className="bg-[#003366] rounded-[2rem] overflow-hidden flex flex-col lg:flex-row shadow-2xl border border-gray-100">
+//             <div className="lg:w-1/2 p-12 md:p-16 space-y-6">
+//               <h2 className="text-orange-500 text-sm font-black tracking-[0.4em] uppercase">Introducing Our Premium Brand</h2>
+//               <h3 className="text-white text-6xl md:text-8xl font-black italic tracking-tighter uppercase">i-NAX™</h3>
+//               <p className="text-white text-2xl font-bold italic border-b-2 border-orange-500 pb-4 inline-block">
+//                 Built for Performance. Engineered for Precision.
+//               </p>
+//               <p className="text-gray-300 text-lg leading-relaxed pt-4">
+//                 In 2025, Mech Chem Engineering Services launched i-NAX™, a premium brand of advanced CNC and precision machinery. I-NAX™ machines are built to deliver high precision, long-lasting durability, and reliable performance for modern manufacturing industries.
+//               </p>
+//               <Link to="/i-nax" className="inline-flex bg-orange-500 text-white px-10 py-4 font-black hover:bg-white hover:text-[#003366] transition-all uppercase text-xs tracking-widest mt-4">
+//                 Explore i-NAX™ Products
+//               </Link>
+//             </div>
+//             <div className="lg:w-1/2 relative min-h-[400px]">
+//                <img
+//                  src="./images/whychooseinax.png"
+//                  alt="i-NAX Machine"
+//                  className="absolute inset-0 w-full h-full object-cover"
+//                />
+//                <div className="absolute inset-0 bg-gradient-to-r from-[#003366] to-transparent lg:hidden"></div>
+//             </div>
+//           </div>
+//         </div>
+//       </section> */}
+//       <section className='w-full relative min-h-[600px] flex items-center bg-[#003366] overflow-hidden'>
+//         {/* 1. Background Image Layer */}
+//         <div className='absolute inset-0 z-0'>
+//           <img
+//             src='./images/whychooseinax.png'
+//             alt='i-NAX Background'
+//             className='w-full h-full object-cover'
+//           />
+//           {/* Dark Overlay - मजकूर स्पष्ट दिसण्यासाठी हा ग्रेडियंट महत्त्वाचा आहे */}
+//           <div className='absolute inset-0 bg-gradient-to-r from-[#003366] via-[#003366]/80 to-transparent'></div>
+//         </div>
+
+//         {/* 2. Content Layer */}
+//         <div className='relative z-10 w-full'>
+//           {/* container काढून थेट padding वापरले आहे जेणेकरून पूर्ण रुंदी मिळेल */}
+//           <div className='w-full p-10 md:p-20 lg:p-5'>
+//             <div className='max-w-4xl space-y-6'>
+//               <h2 className='text-orange-500 text-sm font-black tracking-[0.4em] uppercase'>
+//                 Introducing Our Premium Brand
+//               </h2>
+
+//               <h3 className='text-white text-7xl md:text-9xl font-black italic tracking-tighter uppercase leading-none'>
+//                 i-NAX™
+//               </h3>
+
+//               <div className='inline-block border-b-4 border-orange-500 pb-4'>
+//                 <p className='text-white text-2xl md:text-3xl font-bold italic'>
+//                   Built for Performance. Engineered for Precision.
+//                 </p>
+//               </div>
+
+//               <p className='text-gray-200 text-lg md:text-xl leading-relaxed pt-4 max-w-2xl font-medium'>
+//                 In 2025, Mech Chem Engineering Services launched i-NAX™, a
+//                 premium brand of advanced CNC and precision machinery. I-NAX™
+//                 machines are built to deliver high precision, long-lasting
+//                 durability, and reliable performance for modern manufacturing
+//                 industries.
+//               </p>
+
+//               <div className='pt-6'>
+//                 <Link
+//                   to='/i-nax'
+//                   className='inline-flex bg-orange-500 text-white px-12 py-5 font-black hover:bg-white hover:text-[#003366] transition-all uppercase text-xs tracking-[0.2em] shadow-2xl'
+//                 >
+//                   Explore i-NAX™ Products
+//                 </Link>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* 4. WHO WE ARE */}
+//       <section className='w-full py-24 bg-gray-50'>
+//         <div className='container mx-auto px-6 lg:px-20 grid lg:grid-cols-2 gap-20 items-center'>
+//           <div className='relative'>
+//             <div className='bg-orange-500 w-20 h-1 mb-6'></div>
+//             <h2 className='text-[#003366] text-5xl font-black uppercase tracking-tighter mb-8'>
+//               Who We Are
 //             </h2>
-//             <div className="w-20 h-1 bg-red-700 mx-auto mt-4"></div>
+//             <p className='text-gray-700 text-xl font-bold leading-relaxed mb-6 italic'>
+//               Founded in 2012, Mech Chem Engineering Services specializes in the
+//               sale, installation, servicing, and maintenance of industrial
+//               machinery.
+//             </p>
+//             <p className='text-gray-600 text-lg leading-relaxed'>
+//               With over a decade of hands-on industry experience, we are
+//               committed to providing dependable machines, expert technical
+//               support, and long-term value to our clients. Our strength lies in
+//               combining practical engineering knowledge with customer-focused
+//               service, ensuring smooth operations and minimal downtime for our
+//               customers.
+//             </p>
 //           </div>
-
-//           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-//             {/* Card 1 */}
-//             <div className="bg-white p-10 shadow-sm border-b-4 border-transparent hover:border-red-700 transition-all group">
-//               <div className="w-12 h-12 bg-red-50 text-red-700 flex items-center justify-center rounded mb-6 font-bold group-hover:bg-red-700 group-hover:text-white transition-colors">01</div>
-//               <h3 className="text-xl font-bold mb-4 uppercase tracking-wide">Machining</h3>
-//               <p className="text-gray-500 text-sm leading-relaxed">
-//                 Specialized in high-precision Drilling, Grinding, Shaping, and Milling machines for diverse industrial applications.
-//               </p>
-//             </div>
-
-//             {/* Card 2 */}
-//             <div className="bg-white p-10 shadow-sm border-b-4 border-transparent hover:border-red-700 transition-all group">
-//               <div className="w-12 h-12 bg-red-50 text-red-700 flex items-center justify-center rounded mb-6 font-bold group-hover:bg-red-700 group-hover:text-white transition-colors">02</div>
-//               <h3 className="text-xl font-bold mb-4 uppercase tracking-wide">Metal Fabrication</h3>
-//               <p className="text-gray-500 text-sm leading-relaxed">
-//                 Advanced solutions for cutting, shearing, rolling, and bending, ensuring efficient metal shaping operations.
-//               </p>
-//             </div>
-
-//             {/* Card 3 */}
-//             <div className="bg-white p-10 shadow-sm border-b-4 border-transparent hover:border-red-700 transition-all group">
-//               <div className="w-12 h-12 bg-red-50 text-red-700 flex items-center justify-center rounded mb-6 font-bold group-hover:bg-red-700 group-hover:text-white transition-colors">03</div>
-//               <h3 className="text-xl font-bold mb-4 uppercase tracking-wide">Re-Sharpening</h3>
-//               <p className="text-gray-500 text-sm leading-relaxed">
-//                 Extending tool life with our precision re-sharpening machines for drill bits, end mills, and cutters.
+//           <div className='grid grid-cols-2 gap-6'>
+//             <img
+//               src='https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=500&auto=format&fit=crop'
+//               className='rounded-2xl h-64 w-full object-cover shadow-lg'
+//               alt='Workshop'
+//             />
+//             <div className='bg-[#003366] p-10 rounded-2xl text-white flex flex-col justify-center text-center shadow-xl'>
+//               <h4 className='text-4xl font-black text-orange-500 mb-2'>12+</h4>
+//               <p className='text-[10px] uppercase font-bold tracking-widest'>
+//                 Years of Expertise
 //               </p>
 //             </div>
 //           </div>
 //         </div>
 //       </section>
 
-//       {/* 3. CTA SECTION */}
-//       <section className="bg-gray-900 py-16">
-//         <div className="max-w-7xl mx-auto px-4 text-center">
-//           <h2 className="text-2xl md:text-3xl font-bold text-white uppercase tracking-wider">
-//             Need a Custom Machine Solution?
+//       {/* 5. OUR SERVICES */}
+//       <section className='w-full py-24 bg-white'>
+//         <div className='container mx-auto px-6 lg:px-20'>
+//           <div className='mb-20 text-center lg:text-left'>
+//             <h2 className='text-[#003366] text-5xl font-black uppercase tracking-tighter'>
+//               Our Services
+//             </h2>
+//             <p className='text-orange-500 text-xl font-bold uppercase italic mt-2'>
+//               Industrial Solutions You Can Rely On
+//             </p>
+//           </div>
+
+//           <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-1'>
+//             {[
+//               {
+//                 icon: <Settings size={40} />,
+//                 title: 'Industrial Machinery Sales',
+//                 desc: 'High-quality industrial machines designed to meet modern manufacturing needs.'
+//               },
+//               {
+//                 icon: <Hammer size={40} />,
+//                 title: 'Installation & Commissioning',
+//                 desc: 'Professional installation and setup for optimal machine performance.'
+//               },
+//               {
+//                 icon: <Wrench size={40} />,
+//                 title: 'Repair & Maintenance Services',
+//                 desc: 'Quick and reliable servicing to reduce downtime and increase productivity.'
+//               },
+//               {
+//                 icon: <ShieldCheck size={40} />,
+//                 title: 'Spare Parts Support',
+//                 desc: 'Genuine spare parts to ensure durability and consistent performance.'
+//               }
+//             ].map((s, i) => (
+//               <div
+//                 key={i}
+//                 className='bg-gray-50 p-12 hover:bg-[#003366] hover:text-white transition-all duration-500 group border-b-4 border-transparent hover:border-orange-500 shadow-sm'
+//               >
+//                 <div className='text-orange-500 mb-8 group-hover:scale-110 transition-transform'>
+//                   {s.icon}
+//                 </div>
+//                 <h4 className='text-lg font-black uppercase mb-4 leading-tight'>
+//                   {s.title}
+//                 </h4>
+//                 <p className='text-sm opacity-70 group-hover:opacity-100 leading-relaxed'>
+//                   {s.desc}
+//                 </p>
+//               </div>
+//             ))}
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* 6. WHY CHOOSE & INDUSTRIES */}
+//       <section className='w-full py-24 bg-[#001a33] text-white'>
+//         <div className='container mx-auto px-6 lg:px-20 grid lg:grid-cols-2 gap-24'>
+//           <div className='space-y-12'>
+//             <h2 className='text-3xl font-black uppercase border-b-2 border-orange-500 pb-4 inline-block'>
+//               Why Choose Us
+//             </h2>
+//             <div className='space-y-6'>
+//               {[
+//                 'Established in 2012 with proven industry experience',
+//                 'Trusted partner for sales and after-sales support',
+//                 'Skilled technical and service team',
+//                 'Customer-first approach',
+//                 'Commitment to quality and reliability'
+//               ].map((item, i) => (
+//                 <div key={i} className='flex items-start gap-4'>
+//                   <CheckCircle2
+//                     className='text-orange-500 shrink-0'
+//                     size={24}
+//                   />
+//                   <span className='text-lg font-bold text-gray-200'>
+//                     {item}
+//                   </span>
+//                 </div>
+//               ))}
+//             </div>
+//           </div>
+//           <div className='space-y-12'>
+//             <h2 className='text-3xl font-black uppercase border-b-2 border-orange-500 pb-4 inline-block'>
+//               Industries We Serve
+//             </h2>
+//             <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
+//               {[
+//                 'Manufacturing Units',
+//                 'Engineering Workshops',
+//                 'Automotive & Components',
+//                 'Fabrication & Tool Rooms',
+//                 'Industrial Production Facilities'
+//               ].map((ind, i) => (
+//                 <div
+//                   key={i}
+//                   className='flex items-center gap-3 p-4 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition-colors'
+//                 >
+//                   <Factory size={18} className='text-orange-500' />
+//                   <span className='text-xs font-black uppercase tracking-widest'>
+//                     {ind}
+//                   </span>
+//                 </div>
+//               ))}
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* 7. FINAL CTA */}
+//       <section className='w-full py-32 bg-white text-center'>
+//         <div className='container mx-auto px-6 max-w-5xl'>
+//           <h2 className='text-[#003366] text-4xl md:text-6xl font-black uppercase tracking-tighter mb-6'>
+//             Let’s Build Reliable Industrial <br />{' '}
+//             <span className='text-orange-500'>Solutions Together</span>
 //           </h2>
-//           <p className="text-gray-400 mt-4 mb-8 max-w-xl mx-auto">
-//             Contact our engineering team today to discuss your specific requirements and get a detailed quote.
+//           <p className='text-gray-500 text-xl font-bold italic mb-12'>
+//             Looking for trusted industrial machinery or expert service support?{' '}
+//             <br />
+//             Our team is ready to help you choose the right solution for your
+//             business.
 //           </p>
-//           <button className="px-10 py-4 bg-white text-gray-900 font-black rounded hover:bg-red-700 hover:text-white transition-all uppercase text-sm">
-//             Get In Touch
-//           </button>
-//         </div>
-//       </section>
-//     </div>
-//   );
-// };
-
-// export default Home;
-
-// import React from 'react';
-
-// const Home = () => {
-//   return (
-//     <div className="w-full">
-//       {/* 1. HERO SECTION */}
-//       <section className="relative bg-white overflow-hidden border-b border-gray-100">
-//         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
-//           <div className="flex flex-col lg:flex-row items-center gap-16">
-
-//             {/* LEFT: Content */}
-//             <div className="flex-1 text-center lg:text-left z-10">
-//               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 leading-tight uppercase">
-//                 Leading <span className="text-red-700">Manufacturer</span> <br />
-//                 of Industrial Machines
-//               </h1>
-//               <p className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-//                 High-performance engineering solutions for Machining, Metal Fabrication, and Re-Sharpening. Delivering precision and durability to global industries.
-//               </p>
-
-//               <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-//                 <button className="px-8 py-4 bg-red-700 text-white font-bold rounded shadow-lg hover:bg-gray-800 transition-all duration-300 uppercase text-sm tracking-wider">
-//                   Explore Machines
-//                 </button>
-//                 <button className="px-8 py-4 border-2 border-gray-800 text-gray-800 font-bold rounded hover:bg-gray-800 hover:text-white transition-all duration-300 uppercase text-sm tracking-wider">
-//                   Inquiry Now
-//                 </button>
-//               </div>
-
-//               {/* Trust Badges */}
-//               <div className="mt-12 flex items-center justify-center lg:justify-start gap-8 text-gray-400">
-//                 <div className="flex flex-col">
-//                   <span className="text-2xl font-bold text-gray-800">25+</span>
-//                   <span className="text-[10px] uppercase tracking-widest font-bold">Years Exp.</span>
-//                 </div>
-//                 <div className="w-px h-10 bg-gray-200"></div>
-//                 <div className="flex flex-col">
-//                   <span className="text-2xl font-bold text-gray-800">ISO</span>
-//                   <span className="text-[10px] uppercase tracking-widest font-bold">Certified</span>
-//                 </div>
-//               </div>
-//             </div>
-
-//             {/* RIGHT: Optimized Image Container (Image size is fixed here) */}
-//             <div className="flex-1 relative w-full flex justify-center lg:justify-end">
-//               {/* max-w-lg वापरल्यामुळे इमेज ५१२px पेक्षा मोठी होणार नाही */}
-//               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-b-8 border-red-700 w-full max-w-md lg:max-w-lg">
-//                 <img
-//                   src="https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&q=80&w=800"
-//                   alt="Industrial Machine"
-
-//                   className="w-full h-80 lg:h-450 object-cover hover:scale-105 transition-transform duration-700"
-//                 />
-//                 <div className="absolute bottom-0 left-0 w-full bg-gray-900/80 text-white p-3 text-[10px] font-mono tracking-widest uppercase">
-//                   Model: MECH-X100 | Precision Engineering
-//                 </div>
-//               </div>
-//             </div>
-
-//           </div>
-//         </div>
-//       </section>
-
-//       <section className="bg-gray-900 py-16">
-//          <div className="max-w-7xl mx-auto px-4 text-center">
-//            <h2 className="text-2xl md:text-3xl font-bold text-white uppercase tracking-wider">
-//              Need a Custom Machine Solution?
-//            </h2>
-//            <p className="text-gray-400 mt-4 mb-8 max-w-xl mx-auto">
-//              Contact our engineering team today to discuss your specific requirements and get a detailed quote.
-//            </p>
-//            <button className="px-10 py-4 bg-white text-gray-900 font-black rounded hover:bg-red-700 hover:text-white transition-all uppercase text-sm">
-//              Get In Touch
-//            </button>
-//          </div>
-//        </section>
-
-//       {/* 2. EXPERTISE SECTION (Cards) */}
-//       <section className="bg-gray-50 py-20">
-//         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-//           <div className="text-center mb-16">
-//             <h2 className="text-3xl font-black text-gray-900 uppercase">
-//               Our <span className="text-red-700">Expertise</span>
-//             </h2>
-//             <div className="w-20 h-1.5 bg-red-700 mx-auto mt-4"></div>
-//           </div>
-
-//           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-//             {/* Card 1 */}
-//             <div className="bg-white p-10 shadow-sm border-b-4 border-transparent hover:border-red-700 transition-all group">
-//               <div className="w-12 h-12 bg-red-50 text-red-700 flex items-center justify-center rounded mb-6 font-bold group-hover:bg-red-700 group-hover:text-white transition-colors">01</div>
-//               <h3 className="text-xl font-bold mb-4 uppercase">Machining</h3>
-//               <p className="text-gray-500 text-sm leading-relaxed">
-//                 Precision Lathe, Milling, and Drilling machines designed for heavy-duty industrial performance.
-//               </p>
-//             </div>
-
-//             {/* Card 2 */}
-//             <div className="bg-white p-10 shadow-sm border-b-4 border-transparent hover:border-red-700 transition-all group">
-//               <div className="w-12 h-12 bg-red-50 text-red-700 flex items-center justify-center rounded mb-6 font-bold group-hover:bg-red-700 group-hover:text-white transition-colors">02</div>
-//               <h3 className="text-xl font-bold mb-4 uppercase">Fabrication</h3>
-//               <p className="text-gray-500 text-sm leading-relaxed">
-//                 Advanced Cutting, Bending, and Shearing solutions for seamless metal shaping.
-//               </p>
-//             </div>
-
-//             {/* Card 3 */}
-//             <div className="bg-white p-10 shadow-sm border-b-4 border-transparent hover:border-red-700 transition-all group">
-//               <div className="w-12 h-12 bg-red-50 text-red-700 flex items-center justify-center rounded mb-6 font-bold group-hover:bg-red-700 group-hover:text-white transition-colors">03</div>
-//               <h3 className="text-xl font-bold mb-4 uppercase">Re-Sharpening</h3>
-//               <p className="text-gray-500 text-sm leading-relaxed">
-//                 Maximize tool efficiency with our specialized drill bit and tool re-sharpening equipment.
-//               </p>
-//             </div>
+//           <div className='flex flex-col sm:flex-row justify-center gap-6'>
+//             <Link
+//               to='/contact'
+//               className='bg-[#003366] text-white px-12 py-5 font-black uppercase tracking-widest text-xs hover:bg-orange-500 transition-all shadow-2xl flex items-center justify-center gap-3'
+//             >
+//               <Phone size={18} /> Contact Us Today
+//             </Link>
+//             <Link
+//               to='/contact'
+//               className='bg-white border-2 border-[#003366] text-[#003366] px-12 py-5 font-black uppercase tracking-widest text-xs hover:bg-[#003366] hover:text-white transition-all flex items-center justify-center gap-3'
+//             >
+//               <Mail size={18} /> Request a Service or Quotation
+//             </Link>
 //           </div>
 //         </div>
 //       </section>
 //     </div>
-//   );
-// };
+//   )
+// }
 
-// export default Home;
+// export default Home
 
 import React from 'react'
+import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion' // Framer Motion Added
+import {
+  Settings,
+  Wrench,
+  ShieldCheck,
+  Factory,
+  Zap,
+  Award,
+  Users,
+  Hammer,
+  CheckCircle2,
+  Phone,
+  Mail,
+  ChevronRight
+} from 'lucide-react'
 
 const Home = () => {
   return (
-    <div className='w-full'>
-      {/* 1. HERO SECTION - मजकूर आणि फोटोची उंची मॅच केली आहे */}
-      <section className='relative bg-white overflow-hidden border-b border-gray-100'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20'>
-          {/* items-stretch मुळे दोन्ही कॉलम्सची हाईट सारखी राहते */}
-          <div className='flex flex-col lg:flex-row lg:items-stretch gap-12'>
-            {/* LEFT: Content */}
-            <div className='flex-1 flex flex-col justify-center text-center lg:text-left py-4'>
-              <h1 className='text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 leading-tight uppercase'>
-                Leading <span className='text-red-700'>Manufacturer</span>{' '}
-                <br />
-                of Industrial Machines
-              </h1>
-              <p className='mt-6 text-lg text-gray-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed'>
-                High-performance engineering solutions for Machining, Metal
-                Fabrication, and Re-Sharpening. Delivering precision and
-                durability to global industries.
-              </p>
+    <div className='bg-white w-full overflow-hidden font-sans'>
+      {/* 1. HERO SECTION */}
 
-              <div className='mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start'>
-                <button className='px-8 py-4 bg-red-700 text-white font-bold rounded shadow-lg hover:bg-gray-800 transition-all duration-300 uppercase text-sm tracking-wider'>
-                  Explore Machines
-                </button>
-                <button className='px-8 py-4 border-2 border-gray-800 text-gray-800 font-bold rounded hover:bg-gray-800 hover:text-white transition-all duration-300 uppercase text-sm tracking-wider'>
-                  Inquiry Now
-                </button>
+      <section className='relative w-full min-h-[90vh] flex items-center bg-[#003366] overflow-hidden py-1'>
+        {/* Background Image Layer - Less blur, better visibility */}
+        <div className='absolute inset-0 z-0'>
+          <img
+            src='https://wallpaperaccess.com/full/8885056.jpg'
+            className='w-full h-full object-cover ' // Opacity वाढवली जेणेकरून इमेज स्पष्ट दिसेल
+            alt='Industrial Background'
+          />
+          {/* Gradient Overlay for Text Readability */}
+          <div className='absolute inset-0 bg-gradient-to-r from-[#003366] via-[#003366]/60 to-transparent'></div>
+        </div>
+
+        <div className='container mx-auto px-6 md:px-12 lg:px-20 relative z-10'>
+          <div className='max-w-4xl'>
+            {' '}
+            {/* उजव्या बाजूची इमेज काढल्यामुळे आता कंटेन्टला जास्त जागा मिळेल */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className='space-y-10 md:py-10' // Padding वाढवले आहे
+            >
+              <div className='inline-block border-l-4 border-orange-500 pl-6'>
+                {/* Mech Chem चा फॉन्ट साईज कमी केला आहे (text-4xl to 6xl) */}
+                <h1 className='text-white text-4xl md:text-4xl font-black uppercase leading-tight tracking-tighter'>
+                  Mech Chem <br />
+                  <span className='text-orange-500'>Engineering Services</span>
+                </h1>
               </div>
 
-              {/* Trust Badges */}
-              <div className='mt-12 flex items-center justify-center lg:justify-start gap-8 text-gray-400'>
-                <div className='flex flex-col'>
-                  <span className='text-2xl font-bold text-gray-800'>25+</span>
-                  <span className='text-[10px] uppercase tracking-widest font-bold'>
-                    Years Exp.
-                  </span>
-                </div>
-                <div className='w-px h-10 bg-gray-200'></div>
-                <div className='flex flex-col'>
-                  <span className='text-2xl font-bold text-gray-800'>ISO</span>
-                  <span className='text-[10px] uppercase tracking-widest font-bold'>
-                    Certified
-                  </span>
-                </div>
-              </div>
-            </div>
+              <h2 className='text-gray-200 text-xl md:text-2xl font-bold uppercase tracking-wide max-w-2xl'>
+                Industrial Machinery Sales & Services Since 2012
+              </h2>
 
-            {/* RIGHT: Image Container - आता फक्त मजकुराच्या उंचीइतकीच दिसेल */}
-            <div className='flex-1 relative hidden lg:block'>
-              <div className='absolute inset-0 rounded-2xl overflow-hidden shadow-2xl border-b-8 border-red-700'>
-                <img
-                  src='https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&q=80&w=800'
-                  alt='Industrial Machine'
-                  className='w-full h-full object-cover hover:scale-105 transition-transform duration-700'
-                />
-                <div className='absolute bottom-0 left-0 w-full bg-gray-900/80 text-white p-3 text-[10px] font-mono tracking-widest uppercase text-center'>
-                  Model: MECH-X100 | Precision Engineering
-                </div>
+              <div className='space-y-6 max-w-2xl'>
+                <p className='text-white text-lg md:text-xl font-bold italic border-b border-orange-500/30 pb-1 inline-block'>
+                  Reliable Industrial Solutions. Trusted Engineering Expertise.
+                </p>
+                <p className='text-gray-300 text-lg leading-relaxed font-medium'>
+                  Mech Chem Engineering Services is a trusted name in industrial
+                  machinery sales, service, and support. Since our establishment
+                  in 2012 in Nagpur, Maharashtra, we have been delivering
+                  reliable engineering solutions that help industries operate
+                  efficiently and productively.
+                </p>
               </div>
-            </div>
 
-            {/* मोबाईलसाठी इमेज (Normal size) */}
-            <div className='lg:hidden w-full h-64 relative rounded-xl overflow-hidden shadow-lg border-b-4 border-red-700'>
-              <img
-                src='https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&q=80&w=800'
-                alt='Industrial Machine'
-                className='w-full h-full object-cover'
-              />
-            </div>
+              <div className='flex flex-wrap gap-6 pt-1'>
+                <Link
+                  to='/contact'
+                  className='bg-orange-500 text-white px-12 py-4 font-black hover:bg-white hover:text-[#003366] transition-all duration-300 uppercase text-xs tracking-widest shadow-2xl flex items-center gap-2'
+                >
+                  Get in Touch <ChevronRight size={16} />
+                </Link>
+                <Link
+                  to='/i-nax'
+                  className='bg-white/10 backdrop-blur-md border-2 border-white text-white px-12 py-4 font-black hover:bg-white hover:text-[#003366] transition-all duration-300 uppercase text-xs tracking-widest'
+                >
+                  Discover i-NAX™
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+      {/* 2. STATS BAR */}
+      <section className='w-full bg-gray-50 border-y'>
+        <div className='container mx-auto px-6 lg:px-20'>
+          <div className='grid grid-cols-2 lg:grid-cols-4 divide-x divide-gray-200'>
+            {[
+              { label: 'Established', val: '2012' },
+              { label: 'Experience', val: '12+ Years' },
+              { label: 'Supplied', val: '100+ Machines' },
+              { label: 'Client Trust', val: 'Reliable' }
+            ].map((stat, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className='py-10 text-center'
+              >
+                <p className='text-[#003366] text-3xl font-black'>{stat.val}</p>
+                <p className='text-gray-500 text-[10px] font-bold uppercase tracking-[0.2em] mt-1'>
+                  {stat.label}
+                </p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* FEATURED MACHINES SECTION */}
-      <section className='max-w-7xl mx-auto px-4 py-20'>
-        <div className='flex justify-between items-end mb-12 border-l-8 border-red-700 pl-6'>
-          <div>
-            <h2 className='text-3xl font-black text-gray-900 uppercase'>
-              Featured <span className='text-red-700'>Machines</span>
-            </h2>
-            <p className='text-gray-500 mt-2'>
-              Precision-engineered for high productivity
-            </p>
-          </div>
-          <button className='hidden md:block text-red-700 font-bold border-b-2 border-red-700 hover:text-gray-800 hover:border-gray-800 transition-all'>
-            VIEW ALL MACHINES
-          </button>
+      {/* 3. i-NAX™ BRAND HIGHLIGHT */}
+
+      <section className='w-full relative min-h-[600px] flex items-start bg-[#003366] overflow-hidden'>
+        {/* items-start मुळे मजकूर एकदम टॉपला जाईल */}
+
+        {/* 1. Background Layer */}
+        <div className='absolute inset-0 z-0'>
+          <img
+            src='./images/whychooseinax.png'
+            alt='i-NAX Background'
+            className='w-full h-full object-cover opacity-80'
+            style={{
+              objectPosition: 'center bottom'
+            }}
+          />
+          <div className='absolute inset-0 bg-gradient-to-r from-[#003366]/90 via-[#003366]/40 to-transparent'></div>
         </div>
 
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10'>
-          {/* Machine Card 1 */}
-          <div className='group bg-white border border-gray-100 shadow-md hover:shadow-2xl transition-all duration-300 rounded-xl overflow-hidden'>
-            <div className='relative h-64 overflow-hidden bg-gray-200'>
-              <img
-                src='https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=600'
-                alt='Lathe Machine'
-                className='w-full h-full object-cover group-hover:scale-110 transition-transform duration-500'
-              />
-              <div className='absolute top-4 right-4 bg-red-700 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase'>
-                New Arrival
-              </div>
-            </div>
-            <div className='p-6'>
-              <h3 className='text-xl font-black text-gray-900 uppercase tracking-tight'>
-                Heavy Duty Lathe Machine
+        {/* 2. Content Layer - Zero Top Padding */}
+        <div className='relative z-10 w-full'>
+          {/* pt-0 (Padding Top Zero) आणि px-3 वापरले आहे */}
+          <div className='w-full px-3 pt-0 pb-10 text-left'>
+            <motion.div
+              initial={{ opacity: 0, y: -20 }} // वरून खाली येणारे ॲनिमेशन
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className='max-w-3xl space-y-4'
+            >
+              {/* 'Introducing...' च्या वर असलेली डीफॉल्ट जागा घालवण्यासाठी mt-0 वापरले आहे */}
+              <h2 className='text-orange-500 text-[10px] font-black tracking-[0.4em] uppercase mt-0 pt-4'>
+                Introducing Our Premium Brand
+              </h2>
+
+              <h3 className='text-white text-5xl md:text-7xl font-black italic tracking-tighter uppercase leading-none'>
+                i-NAX™
               </h3>
-              <p className='text-sm text-gray-500 mt-2 line-clamp-2 italic'>
-                Suitable for high-precision turning operations in heavy
+
+              <div className='inline-block border-b-4 border-orange-500 pb-2'>
+                <p className='text-white text-xl md:text-2xl font-bold italic leading-tight'>
+                  Built for Performance. Engineered for Precision.
+                </p>
+              </div>
+
+              <p className='text-white text-sm md:text-lg leading-relaxed max-w-xl font-semibold drop-shadow-lg'>
+                In 2025, Mech Chem Engineering Services launched i-NAX™, a
+                premium brand of advanced CNC and precision machinery. I-NAX™
+                machines are built to deliver high precision, long-lasting
+                durability, and reliable performance for modern manufacturing
                 industries.
               </p>
 
-              <div className='mt-6 flex items-center justify-between'>
-                <div>
-                  <span className='text-xs text-gray-400 block uppercase'>
-                    Starting from
-                  </span>
-                  <span className='text-2xl font-black text-red-700'>
-                    ₹4,50,000
-                  </span>
-                </div>
-                <button className='bg-gray-900 text-white p-3 rounded hover:bg-red-700 transition-colors'>
-                  <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    className='h-6 w-6'
-                    fill='none'
-                    viewBox='0 0 24 24'
-                    stroke='currentColor'
-                  >
-                    <path
-                      strokeLinecap='round'
-                      strokeLinejoin='round'
-                      strokeWidth={2}
-                      d='M14 5l7 7m0 0l-7 7m7-7H3'
-                    />
-                  </svg>
-                </button>
+              <div className='pt-4'>
+                <Link
+                  to='/i-nax'
+                  className='inline-flex bg-orange-500 text-white px-10 py-4 font-black hover:bg-white hover:text-[#003366] transition-all uppercase text-[10px] tracking-widest shadow-2xl'
+                >
+                  Explore i-NAX™ Products
+                </Link>
               </div>
-            </div>
-          </div>
-
-          {/* Machine Card 2 */}
-          <div className='group bg-white border border-gray-100 shadow-md hover:shadow-2xl transition-all duration-300 rounded-xl overflow-hidden'>
-            <div className='relative h-64 overflow-hidden bg-gray-200'>
-              <img
-                src='https://images.unsplash.com/photo-1565106430482-8f6e74349ca1?auto=format&fit=crop&q=80&w=600'
-                alt='Drilling Machine'
-                className='w-full h-full object-cover group-hover:scale-110 transition-transform duration-500'
-              />
-              <div className='absolute top-4 right-4 bg-gray-800 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase'>
-                Best Seller
-              </div>
-            </div>
-            <div className='p-6'>
-              <h3 className='text-xl font-black text-gray-900 uppercase tracking-tight'>
-                Precision Radial Drill
-              </h3>
-              <p className='text-sm text-gray-500 mt-2 line-clamp-2 italic'>
-                Engineered for smooth drilling in solid metal blocks with 100%
-                accuracy.
-              </p>
-
-              <div className='mt-6 flex items-center justify-between'>
-                <div>
-                  <span className='text-xs text-gray-400 block uppercase'>
-                    Starting from
-                  </span>
-                  <span className='text-2xl font-black text-red-700'>
-                    ₹2,80,000
-                  </span>
-                </div>
-                <button className='bg-gray-900 text-white p-3 rounded hover:bg-red-700 transition-colors'>
-                  <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    className='h-6 w-6'
-                    fill='none'
-                    viewBox='0 0 24 24'
-                    stroke='currentColor'
-                  >
-                    <path
-                      strokeLinecap='round'
-                      strokeLinejoin='round'
-                      strokeWidth={2}
-                      d='M14 5l7 7m0 0l-7 7m7-7H3'
-                    />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* Machine Card 3 */}
-          <div className='group bg-white border border-gray-100 shadow-md hover:shadow-2xl transition-all duration-300 rounded-xl overflow-hidden'>
-            <div className='relative h-64 overflow-hidden bg-gray-200'>
-              <img
-                src='https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80&w=600'
-                alt='Milling Machine'
-                className='w-full h-full object-cover group-hover:scale-110 transition-transform duration-500'
-              />
-            </div>
-            <div className='p-6'>
-              <h3 className='text-xl font-black text-gray-900 uppercase tracking-tight'>
-                Vertical Milling Machine
-              </h3>
-              <p className='text-sm text-gray-500 mt-2 line-clamp-2 italic'>
-                Compact and powerful milling solution for tool rooms and
-                workshops.
-              </p>
-
-              <div className='mt-6 flex items-center justify-between'>
-                <div>
-                  <span className='text-xs text-gray-400 block uppercase'>
-                    Starting from
-                  </span>
-                  <span className='text-2xl font-black text-red-700'>
-                    ₹6,20,000
-                  </span>
-                </div>
-                <button className='bg-gray-900 text-white p-3 rounded hover:bg-red-700 transition-colors'>
-                  <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    className='h-6 w-6'
-                    fill='none'
-                    viewBox='0 0 24 24'
-                    stroke='currentColor'
-                  >
-                    <path
-                      strokeLinecap='round'
-                      strokeLinejoin='round'
-                      strokeWidth={2}
-                      d='M14 5l7 7m0 0l-7 7m7-7H3'
-                    />
-                  </svg>
-                </button>
-              </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* 2. CTA SECTION (Dark Banner) */}
-      <section className='bg-gray-900 py-16'>
-        <div className='max-w-7xl mx-auto px-4 text-center'>
-          <h2 className='text-2xl md:text-3xl font-bold text-white uppercase tracking-wider'>
-            Need a Custom Machine Solution?
-          </h2>
-          <p className='text-gray-400 mt-4 mb-8 max-w-xl mx-auto'>
-            Contact our engineering team today to discuss your specific
-            requirements and get a detailed quote.
-          </p>
-          <button className='px-10 py-4 bg-white text-gray-900 font-black rounded hover:bg-red-700 hover:text-white transition-all uppercase text-sm'>
-            Get In Touch
-          </button>
-        </div>
-      </section>
 
-      {/* 3. EXPERTISE SECTION (Cards) */}
-      <section className='bg-gray-50 py-20'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-16'>
-            <h2 className='text-3xl font-black text-gray-900 uppercase'>
-              Our <span className='text-red-700'>Expertise</span>
+      {/* 4. WHO WE ARE */}
+      <section className='w-full py-24 bg-gray-50'>
+        <div className='container mx-auto px-6 lg:px-20 grid lg:grid-cols-2 gap-20 items-center'>
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+          >
+            <div className='bg-orange-500 w-20 h-1 mb-6'></div>
+            <h2 className='text-[#003366] text-5xl font-black uppercase tracking-tighter mb-8'>
+              Who We Are
             </h2>
-            <div className='w-20 h-1.5 bg-red-700 mx-auto mt-4'></div>
+            <p className='text-gray-700 text-xl font-bold leading-relaxed mb-6 italic'>
+              Founded in 2012, Mech Chem Engineering Services specializes in the
+              sale, installation, servicing, and maintenance of industrial
+              machinery.
+            </p>
+            <p className='text-gray-600 text-lg leading-relaxed'>
+              With over a decade of hands-on industry experience, we are
+              committed to providing dependable machines, expert technical
+              support, and long-term value to our clients. Our strength lies in
+              combining practical engineering knowledge with customer-focused
+              service, ensuring smooth operations and minimal downtime for our
+              customers.
+            </p>
+          </motion.div>
+          <div className='grid grid-cols-2 gap-6'>
+            <img
+              src='https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=500'
+              className='rounded-2xl h-64 w-full object-cover shadow-lg'
+              alt='Workshop'
+            />
+            <div className='bg-[#003366] p-10 rounded-2xl text-white flex flex-col justify-center text-center shadow-xl'>
+              <h4 className='text-4xl font-black text-orange-500 mb-2'>12+</h4>
+              <p className='text-[10px] uppercase font-bold tracking-widest'>
+                Years of Expertise
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. OUR SERVICES */}
+      <section className='w-full py-24 bg-white'>
+        <div className='container mx-auto px-6 lg:px-20'>
+          <div className='mb-20 text-center lg:text-left'>
+            <h2 className='text-[#003366] text-5xl font-black uppercase tracking-tighter'>
+              Our Services
+            </h2>
+            <p className='text-orange-500 text-xl font-bold uppercase italic mt-2'>
+              Industrial Solutions You Can Rely On
+            </p>
           </div>
 
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-            <div className='bg-white p-10 shadow-sm border-b-4 border-transparent hover:border-red-700 transition-all group'>
-              <div className='w-12 h-12 bg-red-50 text-red-700 flex items-center justify-center rounded mb-6 font-bold group-hover:bg-red-700 group-hover:text-white transition-colors'>
-                01
-              </div>
-              <h3 className='text-xl font-bold mb-4 uppercase'>Machining</h3>
-              <p className='text-gray-500 text-sm leading-relaxed'>
-                Precision Lathe, Milling, and Drilling machines designed for
-                heavy-duty industrial performance.
-              </p>
-            </div>
+          <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-1'>
+            {[
+              {
+                icon: <Settings size={40} />,
+                title: 'Industrial Machinery Sales',
+                desc: 'High-quality industrial machines designed to meet modern manufacturing needs.'
+              },
+              {
+                icon: <Hammer size={40} />,
+                title: 'Installation & Commissioning',
+                desc: 'Professional installation and setup for optimal machine performance.'
+              },
+              {
+                icon: <Wrench size={40} />,
+                title: 'Repair & Maintenance Services',
+                desc: 'Quick and reliable servicing to reduce downtime and increase productivity.'
+              },
+              {
+                icon: <ShieldCheck size={40} />,
+                title: 'Spare Parts Support',
+                desc: 'Genuine spare parts to ensure durability and consistent performance.'
+              }
+            ].map((s, i) => (
+              <motion.div
+                key={i}
+                whileHover={{ y: -10 }}
+                className='bg-gray-50 p-12 hover:bg-[#003366] hover:text-white transition-all duration-500 group border-b-4 border-transparent hover:border-orange-500 shadow-sm'
+              >
+                <div className='text-orange-500 mb-8 group-hover:scale-110 transition-transform'>
+                  {s.icon}
+                </div>
+                <h4 className='text-lg font-black uppercase mb-4 leading-tight'>
+                  {s.title}
+                </h4>
+                <p className='text-sm opacity-70 group-hover:opacity-100 leading-relaxed'>
+                  {s.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            <div className='bg-white p-10 shadow-sm border-b-4 border-transparent hover:border-red-700 transition-all group'>
-              <div className='w-12 h-12 bg-red-50 text-red-700 flex items-center justify-center rounded mb-6 font-bold group-hover:bg-red-700 group-hover:text-white transition-colors'>
-                02
-              </div>
-              <h3 className='text-xl font-bold mb-4 uppercase'>Fabrication</h3>
-              <p className='text-gray-500 text-sm leading-relaxed'>
-                Advanced Cutting, Bending, and Shearing solutions for seamless
-                metal shaping.
-              </p>
+      {/* 6. WHY CHOOSE & INDUSTRIES */}
+      <section className='w-full py-24 bg-[#001a33] text-white'>
+        <div className='container mx-auto px-6 lg:px-20 grid lg:grid-cols-2 gap-24'>
+          <div className='space-y-12'>
+            <h2 className='text-3xl font-black uppercase border-b-2 border-orange-500 pb-4 inline-block'>
+              Why Choose Us
+            </h2>
+            <div className='space-y-6'>
+              {[
+                'Established in 2012 with proven industry experience',
+                'Trusted partner for sales and after-sales support',
+                'Skilled technical and service team',
+                'Customer-first approach',
+                'Commitment to quality and reliability'
+              ].map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className='flex items-start gap-4'
+                >
+                  <CheckCircle2
+                    className='text-orange-500 shrink-0'
+                    size={24}
+                  />
+                  <span className='text-lg font-bold text-gray-200'>
+                    {item}
+                  </span>
+                </motion.div>
+              ))}
             </div>
+          </div>
+          <div className='space-y-12'>
+            <h2 className='text-3xl font-black uppercase border-b-2 border-orange-500 pb-4 inline-block'>
+              Industries We Serve
+            </h2>
+            <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
+              {[
+                'Manufacturing Units',
+                'Engineering Workshops',
+                'Automotive & Components',
+                'Fabrication & Tool Rooms',
+                'Industrial Production Facilities'
+              ].map((ind, i) => (
+                <div
+                  key={i}
+                  className='flex items-center gap-3 p-4 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition-colors'
+                >
+                  <Factory size={18} className='text-orange-500' />
+                  <span className='text-xs font-black uppercase tracking-widest'>
+                    {ind}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
-            <div className='bg-white p-10 shadow-sm border-b-4 border-transparent hover:border-red-700 transition-all group'>
-              <div className='w-12 h-12 bg-red-50 text-red-700 flex items-center justify-center rounded mb-6 font-bold group-hover:bg-red-700 group-hover:text-white transition-colors'>
-                03
-              </div>
-              <h3 className='text-xl font-bold mb-4 uppercase'>
-                Re-Sharpening
-              </h3>
-              <p className='text-gray-500 text-sm leading-relaxed'>
-                Maximize tool efficiency with our specialized drill bit and tool
-                re-sharpening equipment.
-              </p>
-            </div>
+      {/* 7. FINAL CTA */}
+      <section className='w-full py-32 bg-white text-center'>
+        <div className='container mx-auto px-6 max-w-5xl'>
+          <h2 className='text-[#003366] text-4xl md:text-6xl font-black uppercase tracking-tighter mb-6'>
+            Let’s Build Reliable Industrial <br />{' '}
+            <span className='text-orange-500'>Solutions Together</span>
+          </h2>
+          <p className='text-gray-500 text-xl font-bold italic mb-12'>
+            Looking for trusted industrial machinery or expert service support?{' '}
+            <br />
+            Our team is ready to help you choose the right solution for your
+            business.
+          </p>
+          <div className='flex flex-col sm:flex-row justify-center gap-6'>
+            <Link
+              to='/contact'
+              className='bg-[#003366] text-white px-12 py-5 font-black uppercase tracking-widest text-xs hover:bg-orange-500 transition-all shadow-2xl flex items-center justify-center gap-3'
+            >
+              <Phone size={18} /> Contact Us Today
+            </Link>
+            <Link
+              to='/contact'
+              className='bg-white border-2 border-[#003366] text-[#003366] px-12 py-5 font-black uppercase tracking-widest text-xs hover:bg-[#003366] hover:text-white transition-all flex items-center justify-center gap-3'
+            >
+              <Mail size={18} /> Request a Service or Quotation
+            </Link>
           </div>
         </div>
       </section>
