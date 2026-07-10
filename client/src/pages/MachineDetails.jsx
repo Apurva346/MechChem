@@ -53,8 +53,8 @@ const MachineDetails = () => {
     <div className="bg-white min-h-screen font-sans selection:bg-red-100 selection:text-red-900">
       
       {/* 1. HEADER SECTION */}
-      <div className="bg-slate-900 py-12 px-6">
-        <div className="max-w-7xl mx-auto">
+      <div className="bg-slate-900 w-screen py-12 mt-20">
+        <div className="max-w-7xl mx-auto px-6">
           <nav className="flex items-center gap-2 text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-6">
             <Link to="/" className="hover:text-red-500 transition">Home</Link>
             <span className="text-slate-700">/</span>

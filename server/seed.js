@@ -347,7 +347,7 @@ const latheMachines = [
         metaDescription: "Buy Light Duty Lathe Machine in Nagpur at competitive prices. Ideal for small workshops, ITI institutes & job shops."
     },
     {
-        name: "Medium & Heavy Duty Lathe Machine",
+        name: "Medium and Heavy Duty Lathe Machine",
         category: "Lathe Machines",
         categoryDescription: latheDesc,
         subTitle: "Widely used machines in workshops and production units",
@@ -410,7 +410,7 @@ const latheMachines = [
         metaDescription: "Buy Extra Heavy Duty Lathe Machines in Nagpur for steel, paper & power industries. High torque, large swing capacity."
     },
     {
-        name: "Tool Room & Precision Lathe Machine",
+        name: "Tool Room and Precision Lathe Machine",
         category: "Lathe Machines",
         categoryDescription: latheDesc,
         subTitle: "Built for applications where accuracy and surface finish are critical",
